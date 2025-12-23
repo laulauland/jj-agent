@@ -3,11 +3,12 @@
   "version": "0.1.0",
   "description": "A jj-first coding agent that uses Jujutsu version control as its primary workflow mechanism",
   "type": "module",
-  "main": "src/index.ts",
+  "workspaces": ["packages/*"],
+  "main": "packages/jj-agent/main.ts",
   "scripts": {
-    "dev": "bun run --watch src/index.ts",
-    "start": "bun run src/index.ts",
-    "build": "bun build src/index.ts --outdir ./dist --target bun",
+    "dev": "bun run --watch packages/jj-agent/main.ts",
+    "start": "bun run packages/jj-agent/main.ts",
+    "build": "bun build packages/jj-agent/main.ts --outdir ./dist --target bun",
     "test": "bun test",
     "test:watch": "bun test --watch",
     "typecheck": "tsc --noEmit"
@@ -23,10 +24,15 @@
   "author": "Laurynas Keturakis",
   "license": "MIT",
   "dependencies": {
-    "effect": "^3.10.0"
+    "effect": "^3.10.0",
+    "@mariozechner/pl-mono": "^0.1.0",
+    "@mariozechner/pl-tui": "^0.1.0",
+    "openai": "^4.67.0",
+    "chokidar": "^4.0.0"
   },
   "devDependencies": {
     "@types/bun": "latest",
+    "@types/node": "^20.10.0",
     "typescript": "^5.3.3"
   },
   "peerDependencies": {
