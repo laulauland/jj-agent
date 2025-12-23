@@ -1,0 +1,9 @@
+# Bun configuration
+[test]
+# Test file patterns
+preload = ["./test/setup.ts"]
+root = "./test"
+
+[install]
+# Install configuration
+registry = "https://registry.npmjs.org/"
