@@ -1,0 +1,30 @@
+{
+  "name": "jj-agent",
+  "version": "0.1.0",
+  "description": "A jj-first coding agent that uses Jujutsu version control as its primary workflow mechanism",
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "bun run --watch src/index.ts",
+    "start": "bun run src/index.ts",
+    "build": "bun build src/index.ts --outdir ./dist --target bun",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "jujutsu",
+    "jj",
+    "version-control",
+    "coding-agent",
+    "ai",
+    "automation"
+  ],
+  "author": "Laurynas Keturakis",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.3.3"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
